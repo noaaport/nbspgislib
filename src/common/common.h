@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: common.h 816 2010-12-28 20:22:24Z jfnieves $
+ * $Id$
  */
 #ifndef COMMON_H
 #define COMMON_H

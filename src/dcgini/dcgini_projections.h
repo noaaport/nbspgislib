@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_projections.h 839 2011-01-09 23:08:50Z jfnieves $
+ * $Id$
  */
 #ifndef DCGINI_PROJECTIONS_H
 #define DCGINI_PROJECTIONS_H

@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: config.h 729 2010-11-10 00:31:49Z nieves $
+ * $Id$
  */
 #ifndef CONFIG_H
 #define CONFIG_H

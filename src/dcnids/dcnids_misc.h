@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_misc.h 819 2010-12-28 22:48:38Z jfnieves $
+ * $Id$
  */
 #ifndef DCNIDS_MISC_H
 #define DCNIDS_MISC_H

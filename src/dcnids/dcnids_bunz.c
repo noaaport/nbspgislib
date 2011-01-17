@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_bunz.c 729 2010-11-10 00:31:49Z nieves $
+ * $Id$
  */
 #include <stdlib.h>
 #include <bzlib.h>

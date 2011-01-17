@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: nbspunz.c 816 2010-12-28 20:22:24Z jfnieves $
+ * $Id$
  */
 
 /*

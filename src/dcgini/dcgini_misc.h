@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_misc.h 797 2010-12-01 03:13:41Z nieves $
+ * $Id$
  */
 #ifndef DCGINI_MISC_H
 #define DCGINI_MISC_H

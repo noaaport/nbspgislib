@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_info.c 814 2010-12-27 22:05:49Z jfnieves $
+ * $Id$
  */
 #include <stdio.h>
 #include "err.h"

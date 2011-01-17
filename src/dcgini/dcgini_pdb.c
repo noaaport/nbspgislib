@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_pdb.c 838 2011-01-08 03:57:31Z jfnieves $
+ * $Id$
  */
 /* XXX 
 #include <stdio.h>

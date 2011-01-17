@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_header.h 848 2011-01-12 20:50:46Z jfnieves $
+ * $Id$
  */
 #ifndef DCNIDS_HEADER_H
 #define DCNIDS_HEADER_H

@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: nbspsatinfo.c 825 2010-12-29 16:10:21Z jfnieves $
+ * $Id$
  */
 
 /*

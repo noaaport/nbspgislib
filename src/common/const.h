@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: const.h 784 2010-11-27 02:42:05Z nieves $
+ * $Id$
  */
 #ifndef CONST_H
 #define CONST_H

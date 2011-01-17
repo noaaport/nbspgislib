@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_decode.h 803 2010-12-19 17:08:14Z jfnieves $
+ * $Id$
  */
 #ifndef DCNIDS_DECODE_H
 #define DCNIDS_DECODE_H

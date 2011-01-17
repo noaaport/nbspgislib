@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_transform_priv.h 839 2011-01-09 23:08:50Z jfnieves $
+ * $Id$
  */
 #ifndef DCGINI_TRANSFORM_PRIV_H
 #define DCGINI_TRANSFORM_PRIV_H

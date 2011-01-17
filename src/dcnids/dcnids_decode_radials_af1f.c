@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_decode_radials_af1f.c 793 2010-11-30 15:48:58Z nieves $
+ * $Id$
  */
 #include <assert.h>
 #include <stdio.h>

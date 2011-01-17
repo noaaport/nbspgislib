@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_misc.c 797 2010-12-01 03:13:41Z nieves $
+ * $Id$
  */
 #include <unistd.h>
 #include <fcntl.h>

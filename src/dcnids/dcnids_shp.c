@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_shp.c 804 2010-12-22 18:44:38Z jfnieves $
+ * $Id$
  */
 #include <assert.h>
 #include <stdlib.h>

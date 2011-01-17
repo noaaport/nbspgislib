@@ -7,7 +7,6 @@
 #
 TARGET = nbspsatinfo nbspsatgis
 OBJECTS = nbspsatinfo.o nbspsatgis.o ${DC_OBJECTS}
-HEADERS = ${DC_HEADERS}
 
 SATINFO_OBJECTS = nbspsatinfo.o ${COMMON_OBJECTS} ${DC_OBJECTS}
 SATGIS_OBJECTS = nbspsatgis.o ${COMMON_OBJECTS} ${DC_OBJECTS}
@@ -23,10 +22,17 @@ DC_OBJECTS = dcgini_misc.o dcgini_name.o dcgini_pdb.o \
 	dcgini_asc.o dcgini_shp.o dcgini_dbf.o dcgini_csv.o dcgini_info.o
 
 COMMON_DIR = ../common
-COMMON_HEADERS = const.h config.h common.h \
-		err.h io.h misc.h mfile.h util.h unz.h
 COMMON_SOURCES = err.c io.c misc.c mfile.c util.c unz.c
 COMMON_OBJECTS = err.o io.o misc.o mfile.o util.o unz.o
+COMMON_HEADERS = ${COMMON_DIR}/common.h \
+	${COMMON_DIR}/const.h \
+	${COMMON_DIR}/err.h \
+	${COMMON_DIR}/io.h \
+	${COMMON_DIR}/misc.h \
+	${COMMON_DIR}/unz.h \
+	${COMMON_DIR}/util.h
+
+HEADERS = ${DC_HEADERS} ${COMMON_HEADERS}
 
 ALL_OBJECTS = ${OBJECTS} ${COMMON_OBJECTS}
 

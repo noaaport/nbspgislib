@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: unz.c 2 2009-09-11 16:26:26Z nieves $
+ * $Id$
  */
 #include <zlib.h>
 #include <stdlib.h>

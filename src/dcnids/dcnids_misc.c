@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_misc.c 819 2010-12-28 22:48:38Z jfnieves $
+ * $Id$
  */
 #include <unistd.h>
 #include <fcntl.h>

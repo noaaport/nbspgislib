@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_grid.h 839 2011-01-09 23:08:50Z jfnieves $
+ * $Id$
  */
 #ifndef DCGINI_GRID_H
 #define DCGINI_GRID_H

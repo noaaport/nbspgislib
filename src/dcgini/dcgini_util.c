@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_util.c 777 2010-11-24 03:01:31Z nieves $
+ * $Id$
  */
 #include "dcgini_util.h"
 

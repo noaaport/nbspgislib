@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_name.h 838 2011-01-08 03:57:31Z jfnieves $
+ * $Id$
  */
 #ifndef DCGINI_NAME_H
 #define DCGINI_NAME_H

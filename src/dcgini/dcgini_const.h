@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_const.h 798 2010-12-01 19:55:17Z nieves $
+ * $Id$
  */
 #ifndef DCGINI_CONST_H
 #define DCGINI_TCONST_H

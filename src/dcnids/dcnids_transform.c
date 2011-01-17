@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_transform.c 729 2010-11-10 00:31:49Z nieves $
+ * $Id$
  */
 #include <math.h>
 #include "dcnids.h"

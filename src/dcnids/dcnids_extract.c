@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_extract.c 793 2010-11-30 15:48:58Z nieves $
+ * $Id$
  */
 #include <inttypes.h>
 #include "dcnids_extract.h"

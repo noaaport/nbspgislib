@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: err.c 332 2010-06-30 14:44:48Z nieves $
+ * $Id$
  */
 #include <unistd.h>
 #include <syslog.h>

@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: nbspradgis.c 848 2011-01-12 20:50:46Z jfnieves $
+ * $Id$
  */
 
 /*

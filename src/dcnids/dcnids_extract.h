@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_extract.h 797 2010-12-01 03:13:41Z nieves $
+ * $Id$
  */
 #ifndef DCNIDS_EXTRACT_H
 #define DCNIDS_EXTRACT_H

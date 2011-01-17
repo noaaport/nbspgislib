@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: err.h 2 2009-09-11 16:26:26Z nieves $
+ * $Id$
  */
 #ifndef ERR_H
 #define ERR_H

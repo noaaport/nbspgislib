@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: util.c 2 2009-09-11 16:26:26Z nieves $
+ * $Id$
  */
 #include <assert.h>
 #include <errno.h>

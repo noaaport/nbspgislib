@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_asc.c 843 2011-01-11 13:47:03Z jfnieves $
+ * $Id$
  */
 #include <stdlib.h>
 #include <stdio.h>

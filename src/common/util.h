@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: util.h 2 2009-09-11 16:26:26Z nieves $
+ * $Id$
  */
 #ifndef UTIL_H
 #define UTIL_H

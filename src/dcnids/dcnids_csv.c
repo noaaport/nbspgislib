@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_csv.c 729 2010-11-10 00:31:49Z nieves $
+ * $Id$
  */
 #include <stdio.h>
 #include "dcnids.h"

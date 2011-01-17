@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_shp.h 804 2010-12-22 18:44:38Z jfnieves $
+ * $Id$
  */
 #include <inttypes.h>
 #include "dcnids.h"

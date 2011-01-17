@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_shp.h 804 2010-12-22 18:44:38Z jfnieves $
+ * $Id$
  */
 #ifndef DCGINI_SHP_H
 #define DCGINI_SHP_H
