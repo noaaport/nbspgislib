@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_info.h 803 2010-12-19 17:08:14Z jfnieves $
+ * $Id: dcnids_info.h,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 #include <inttypes.h>
 #include <stdio.h>

@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_pdb.h 799 2010-12-02 18:04:01Z nieves $
+ * $Id: dcgini_pdb.h,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 #ifndef DCGINI_PDB_H
 #define DCGINI_PDB_H

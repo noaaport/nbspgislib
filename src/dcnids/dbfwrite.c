@@ -1,5 +1,5 @@
 /*
- * $Id: dbfwrite.c 643 2010-10-12 15:50:20Z nieves $
+ * $Id: dbfwrite.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
  *
  *
  *  cc -o dbfcreate -I /usr/local/include -L /usr/local/lib -lshp dbf.c

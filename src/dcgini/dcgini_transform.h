@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_transform.h 841 2011-01-10 18:47:53Z jfnieves $
+ * $Id: dcgini_transform.h,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 #ifndef DCGINI_TRANSFORM_H
 #define DCGINI_TRANSFORM_H

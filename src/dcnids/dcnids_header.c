@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_header.c 848 2011-01-12 20:50:46Z jfnieves $
+ * $Id: dcnids_header.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 #include <time.h>
 #include <ctype.h>

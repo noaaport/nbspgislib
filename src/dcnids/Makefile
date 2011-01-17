@@ -3,11 +3,10 @@
 #
 # See LICENSE
 #
-# $Id: Makefile,v 7b89a4bfdaf1 2011/01/17 00:15:52 nieves $
+# $Id: Makefile,v ff74993871f7 2011/01/17 22:56:45 nieves $
 #
 TARGET = nbspradinfo nbspradgis
 OBJECTS = nbspradinfo.o nbspradgis.o ${DC_OBJECTS}
-HEADERS = ${DC_HEADERS}
 
 RADINFO_OBJECTS = nbspradinfo.o ${COMMON_OBJECTS} ${DC_OBJECTS}
 RADGIS_OBJECTS = nbspradgis.o ${COMMON_OBJECTS} ${DC_OBJECTS}
@@ -27,10 +26,17 @@ DC_OBJECTS = dcnids_extract.o dcnids_header.o dcnids_name.o dcnids_misc.o \
 	dcnids_shp.o dcnids_csv.o dcnids_dbf.o dcnids_info.o dcnids_bunz.o
 
 COMMON_DIR = ../common
-COMMON_HEADERS = const.h config.h common.h \
-		err.h io.h misc.h mfile.h util.h unz.h
 COMMON_SOURCES = err.c io.c misc.c mfile.c util.c unz.c
 COMMON_OBJECTS = err.o io.o misc.o mfile.o util.o unz.o
+COMMON_HEADERS = ${COMMON_DIR}/common.h \
+	${COMMON_DIR}/const.h \
+	${COMMON_DIR}/err.h \
+	${COMMON_DIR}/io.h \
+	${COMMON_DIR}/misc.h \
+	${COMMON_DIR}/unz.h \
+	${COMMON_DIR}/util.h
+
+HEADERS = ${DC_HEADERS} ${COMMON_HEADERS}
 
 ALL_OBJECTS = ${OBJECTS} ${COMMON_OBJECTS}
 

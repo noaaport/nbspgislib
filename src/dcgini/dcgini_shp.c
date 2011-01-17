@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_shp.c 806 2010-12-23 03:32:38Z jfnieves $
+ * $Id: dcgini_shp.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 /* #include <stdio.h>	delete */
 #include <stdlib.h>

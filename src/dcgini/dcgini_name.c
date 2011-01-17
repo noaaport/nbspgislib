@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_name.c 798 2010-12-01 19:55:17Z nieves $
+ * $Id: dcgini_name.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 #include <assert.h>
 #include <stdlib.h>

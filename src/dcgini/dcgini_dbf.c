@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_dbf.c 805 2010-12-23 00:50:36Z jfnieves $
+ * $Id: dcgini_dbf.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
  */
 #include <assert.h>
 #include <stdlib.h>
