@@ -1,0 +1,7 @@
+#
+# $Id: COMPILE,v 7b89a4bfdaf1 2011/01/17 00:15:52 nieves $
+#
+
+# cd compile
+# ./configure.sh
+# make
