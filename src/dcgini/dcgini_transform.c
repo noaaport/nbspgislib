@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_transform.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
+ * $Id: dcgini_transform.c,v b82feaab8667 2011/01/21 16:38:35 nieves $
  */
 #include <stdio.h>	/* XXX - only for debugging */
 #include <stdlib.h>
@@ -206,6 +206,12 @@ int dcgini_regrid_data(struct dcgini_st *dcg){
     return(-1);
   }
 
+  if(DCGINI_GRID_MAP_NODATA != 0){
+    for(k = 0; k < numpoints; ++k){
+      dcg->gridmap.level[k] = DCGINI_GRID_MAP_NODATA;
+    }
+  }
+
   dcg->gridmap.numpoints = numpoints;
   dcg->gridmap.nlon = dcg->pdb.nx;
   dcg->gridmap.nlat = dcg->pdb.ny;
@@ -331,6 +337,12 @@ int dcgini_regrid_data_asc(struct dcgini_st *dcg,
   if(dcg->gridmap.level == NULL){
     log_err(1, "Cannot allocate memory for gridmap");
     return(-1);
+  }
+
+  if(DCGINI_GRID_MAP_NODATA != 0){
+    for(k = 0; k < numpoints; ++k){
+      dcg->gridmap.level[k] = DCGINI_GRID_MAP_NODATA;
+    }
   }
 
   datap = dcg->gridmap.level;

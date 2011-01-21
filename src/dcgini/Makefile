@@ -3,7 +3,7 @@
 #
 # See LICENSE
 #
-# $Id: Makefile,v ff74993871f7 2011/01/17 22:56:45 nieves $
+# $Id: Makefile,v b82feaab8667 2011/01/21 16:38:35 nieves $
 #
 TARGET = nbspsatinfo nbspsatgis
 OBJECTS = nbspsatinfo.o nbspsatgis.o ${DC_OBJECTS}
@@ -77,7 +77,7 @@ nbspsatinfo: ${SATINFO_OBJECTS}
 	${CC} -o nbspsatinfo ${SATINFO_OBJECTS} ${LDFLAGS}
 
 nbspsatgis: ${SATGIS_OBJECTS}
-	${CC} -o nbspsatgis ${SATINFO_OBJECTS} ${LDFLAGS}
+	${CC} -o nbspsatgis ${SATGIS_OBJECTS} ${LDFLAGS}
 
 clean:
 	rm -f *~ ${TARGET} ${ALL_OBJECTS} ${COMMON_SOURCES}
