@@ -77,7 +77,7 @@ nbspsatinfo: ${SATINFO_OBJECTS}
 	${CC} -o nbspsatinfo ${SATINFO_OBJECTS} ${LDFLAGS}
 
 nbspsatgis: ${SATGIS_OBJECTS}
-	${CC} -o nbspsatgis ${SATINFO_OBJECTS} ${LDFLAGS}
+	${CC} -o nbspsatgis ${SATGIS_OBJECTS} ${LDFLAGS}
 
 clean:
 	rm -f *~ ${TARGET} ${ALL_OBJECTS} ${COMMON_SOURCES}
