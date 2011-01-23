@@ -1,6 +1,15 @@
 #
-# $Id: Makefile,v 7b89a4bfdaf1 2011/01/17 00:15:52 nieves $
+# $Id: Makefile,v 6fc78581a72d 2011/01/23 03:09:44 nieves $
 #
+
+# These are for manipulation by packaging tools
+PKGBUILDDIR = .
+PREFIX = usr/local
+
+DESTDIR = ${PKGBUILDDIR}/${PREFIX}
+BINDIR = ${DESTDIR}/bin
+DOCDIR = ${DESTDIR}/share/doc
+
 BINFILES = \
 	${UNZ_DIR}/nbspunz \
 	${DCNIDS_DIR}/nbspradinfo \
@@ -12,12 +21,12 @@ UNZ_DIR = src/unz
 DCNIDS_DIR = src/dcnids
 DCGINI_DIR = src/dcgini
 
-BINDIR = bin
-
 all:
 	cd src; ${MAKE} all;
+
+install: all
 	install -d ${BINDIR}
 	install -m 0755 ${BINFILES} ${BINDIR}
 
 clean:
-	rm -rf *~ bin src
+	rm -rf *~ ${BINDIR} src
