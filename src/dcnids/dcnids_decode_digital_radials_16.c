@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_decode_digital_radials_16.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
+ * $Id: dcnids_decode_digital_radials_16.c,v ac9a4a8ae1c5 2011/01/26 16:53:08 nieves $
  */
 #include <assert.h>
 #include <stdio.h>
@@ -98,7 +98,8 @@ void nids_decode_digital_radials_16(struct nids_data_st *nd){
     radial_packet.angle_delta_deg = (double)radial_packet.angle_delta/10.0;
 
     /* XXX
-    fprintf(stdout, "num_bytes = %d %f %f\n",
+    fprintf(stdout, "%d %d %f %f\n",
+	    nd->radial_packet_header.numradials,
 	    radial_packet.num_bytes,
 	    radial_packet.angle_start_deg,
 	    radial_packet.angle_delta_deg);
@@ -122,6 +123,10 @@ void nids_decode_digital_radials_16(struct nids_data_st *nd){
       r1 = ((double)(total_bins * nd->radial_packet_header.scale))/1000.0;
       total_bins += run_bins;
       r2 = ((double)(total_bins * nd->radial_packet_header.scale))/1000.0;
+
+      /* XXX
+      fprintf(stdout, "\t%f %f\n", r1, r2);
+      */
 
       /* According to doc, 0 and 1 are not data values */
       if(run_code < 2)
