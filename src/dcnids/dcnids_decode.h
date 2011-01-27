@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_decode.h,v fe562839871f 2011/01/26 16:55:13 nieves $
+ * $Id: dcnids_decode.h,v 115b884afbd8 2011/01/27 01:21:25 nieves $
  */
 #ifndef DCNIDS_DECODE_H
 #define DCNIDS_DECODE_H
@@ -75,7 +75,6 @@ struct nids_data_st {
 };
 
 void nids_decode_radials_af1f(struct nids_data_st *nd);
-void nids_decode_radials_af1f_grided(struct nids_data_st *nd);
 void nids_decode_digital_radials_16(struct nids_data_st *nd);
 
 #endif

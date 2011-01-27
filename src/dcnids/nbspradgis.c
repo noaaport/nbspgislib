@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: nbspradgis.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
+ * $Id: nbspradgis.c,v 115b884afbd8 2011/01/27 01:21:25 nieves $
  */
 
 /*
@@ -240,6 +240,15 @@ int main(int argc, char **argv){
     log_errx(1, "Too many arguments.");
   else if(optind == argc - 1)
     g.opt_inputfile = argv[optind++];
+
+  /*
+   * The -D option is on by default since we use the "grided" version
+   * of the nids->shapefile decode functions. This option is needed for the
+   * legacy types (n0r, ...) otherwise the unnecesary processing of data
+   * slows down the conversion and makes the files much larger.
+   * (nids_decode_radials_af1f_grided())
+   */
+  g.opt_filter = 1;
 
   atexit(cleanup);
   status = process_file();
