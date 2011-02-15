@@ -1,6 +1,7 @@
 #
 # $Id$
-#
+
+The zlib, bzip2 and png libraries are required.
 
 # cd compile
 # ./configure.sh
