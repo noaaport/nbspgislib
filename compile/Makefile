@@ -3,7 +3,7 @@
 #
 
 # These are for manipulation by packaging tools
-PKGBUILDDIR = .
+PKGBUILDDIR = pkg
 PREFIX = usr/local
 
 DESTDIR = ${PKGBUILDDIR}/${PREFIX}
@@ -29,4 +29,4 @@ install: all
 	install -m 0755 ${BINFILES} ${BINDIR}
 
 clean:
-	rm -rf *~ ${BINDIR} src
+	rm -rf *~ ${PKGBUILDDIR} src
