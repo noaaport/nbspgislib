@@ -1,9 +1,9 @@
 #
-# $Id: Makefile,v 6fc78581a72d 2011/01/23 03:09:44 nieves $
+# $Id: Makefile,v 2a20263ee656 2011/08/14 16:16:30 nieves $
 #
 
 # These are for manipulation by packaging tools
-PKGBUILDDIR = .
+PKGBUILDDIR = pkg
 PREFIX = usr/local
 
 DESTDIR = ${PKGBUILDDIR}/${PREFIX}
@@ -29,4 +29,4 @@ install: all
 	install -m 0755 ${BINFILES} ${BINDIR}
 
 clean:
-	rm -rf *~ ${BINDIR} src
+	rm -rf *~ ${PKGBUILDDIR} src
