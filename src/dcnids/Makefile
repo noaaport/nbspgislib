@@ -3,7 +3,7 @@
 #
 # See LICENSE
 #
-# $Id: Makefile,v ff74993871f7 2011/01/17 22:56:45 nieves $
+# $Id: Makefile,v 6353839bd4d6 2011/10/27 19:40:06 nieves $
 #
 TARGET = nbspradinfo nbspradgis
 OBJECTS = nbspradinfo.o nbspradgis.o ${DC_OBJECTS}
@@ -48,7 +48,7 @@ LDFLAGS += 	${LIBDIRS} ${LIBS}
 
 #DEBUGFLAGS =	-g
 #DEBUGFLAGS =	-DNDEBUG
-CCWFLAGS = 	-Wall -Wextra
+CCWFLAGS = 	-Wall -Wextra -Werror
 CFLAGS +=	-c ${DEBUGFLAGS} ${CCWFLAGS} ${INCDIRS}
 
 INSTALL = install

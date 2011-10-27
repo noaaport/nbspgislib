@@ -3,7 +3,7 @@
 #
 # See LICENSE
 #
-# $Id: Makefile,v b82feaab8667 2011/01/21 16:38:35 nieves $
+# $Id: Makefile,v 6353839bd4d6 2011/10/27 19:40:06 nieves $
 #
 TARGET = nbspsatinfo nbspsatgis
 OBJECTS = nbspsatinfo.o nbspsatgis.o ${DC_OBJECTS}
@@ -44,7 +44,7 @@ LDFLAGS += 	${LIBDIRS} ${LIBS}
 
 #DEBUGFLAGS =	-g
 #DEBUGFLAGS =	-DNDEBUG
-CCWFLAGS = 	-Wall -Wextra
+CCWFLAGS = 	-Wall -Wextra -Werror
 CFLAGS +=	-c ${DEBUGFLAGS} ${CCWFLAGS} ${INCDIRS}
 
 INSTALL = install

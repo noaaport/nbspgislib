@@ -3,7 +3,7 @@
 #
 # See LICENSE
 #
-# $Id: Makefile,v 7b89a4bfdaf1 2011/01/17 00:15:52 nieves $
+# $Id: Makefile,v 6353839bd4d6 2011/10/27 19:40:06 nieves $
 #
 TARGET = nbspunz
 
@@ -27,7 +27,7 @@ LDFLAGS += 	${LIBDIRS} ${LIBS}
 
 #DEBUGFLAGS =	-g
 #DEBUGFLAGS =	-DNDEBUG
-CCWFLAGS = 	-Wall -Wextra
+CCWFLAGS = 	-Wall -Wextra -Werror
 CFLAGS +=	-c ${DEBUGFLAGS} ${CCWFLAGS} ${INCDIRS}
 
 INSTALL = install

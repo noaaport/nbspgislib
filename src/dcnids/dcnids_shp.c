@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: dcnids_shp.c,v ff74993871f7 2011/01/17 22:56:45 nieves $
+ * $Id: dcnids_shp.c,v 6353839bd4d6 2011/10/27 19:40:06 nieves $
  */
 #include <assert.h>
 #include <stdlib.h>
@@ -287,7 +287,7 @@ void dcnids_shp_insert_content(unsigned char *p,
     nwords = dcnids_shp_insert_polygon(b, 0, record_number,
 		    pm->polygons[i].lon, pm->polygons[i].lat);
 
-    /* assert(nwords*2 == record_size_bytes); */
+    assert(nwords*2 == record_size_bytes);
 
     b += record_size_bytes;
     ++record_number;
