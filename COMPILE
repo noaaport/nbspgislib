@@ -6,3 +6,11 @@ The zlib, bzip2 and png libraries are required.
 # cd compile
 # ./configure.sh
 # make
+#
+# find usr -type f
+#
+#  usr/local/bin/nbspradgis
+#  usr/local/bin/nbspsatgis
+#  usr/local/bin/nbspunz
+#  usr/local/bin/nbspsatinfo
+#  usr/local/bin/nbspradinfo

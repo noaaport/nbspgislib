@@ -27,7 +27,7 @@ LDFLAGS += 	${LIBDIRS} ${LIBS}
 
 #DEBUGFLAGS =	-g
 #DEBUGFLAGS =	-DNDEBUG
-CCWFLAGS = 	-Wall -Wextra
+CCWFLAGS = 	-Wall -Wextra -Werror
 CFLAGS +=	-c ${DEBUGFLAGS} ${CCWFLAGS} ${INCDIRS}
 
 INSTALL = install
