@@ -28,12 +28,16 @@
 #define NIDS_PDB_CODE_NXQ		94
 #define NIDS_PDB_CODE_NXV		27
 #define NIDS_PDB_CODE_NXU		99
+#define NIDS_PDB_CODE_NXP		78	/* n1p, n3p */
 
 /* default filter min and max level values if the filtering option is set */
 #define NIDS_BREF_LEVEL_MIN_VAL	1
 #define NIDS_BREF_LEVEL_MAX_VAL	96
 #define NIDS_RVEL_LEVEL_MIN_VAL	-64
 #define NIDS_RVEL_LEVEL_MAX_VAL	64
+#define NIDS_NXP_LEVEL_MIN_VAL 5
+#define NIDS_NXP_LEVEL_MAX_VAL 800
+
 
 /* These are arbitrary values that we assign to the rvel codes 0 and 15 */
 #define NIDS_RVEL_LEVEL_ND_MIN	-65
