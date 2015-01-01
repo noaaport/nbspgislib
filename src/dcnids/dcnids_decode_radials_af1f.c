@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2005 Jose F. Nieves <nieves@ltp.upr.clu.edu>
+ * Copyright (c) 2005 Jose F. Nieves <nieves@ltp.uprrp.edu>
  *
  * See LICENSE
  *
@@ -157,7 +157,8 @@ void nids_decode_radials_af1f_orig(struct nids_data_st *nd){
 						 run_code);
       } else if(nd->nids_header.pdb_code == NIDS_PDB_CODE_NXV){
 	run_level = nids_decode_rvel_codetolevel(run_code);
-      } else if(nd->nids_header.pdb_code == NIDS_PDB_CODE_NXP){
+      } else if((nd->nids_header.pdb_code == NIDS_PDB_CODE_NXP) || 
+		(nd->nids_header.pdb_code == NIDS_PDB_CODE_NTP)){
 	  run_level = nids_decode_nxp_codetolevel(run_code);
       } else {
 	log_errx(1, "Unsupported value [%d] of nd->nids_header.pdb_code.",
@@ -331,7 +332,8 @@ static void nids_decode_radials_af1f_grided(struct nids_data_st *nd){
 						 run_code);
       }else if(nd->nids_header.pdb_code == NIDS_PDB_CODE_NXV){
 	run_level = nids_decode_rvel_codetolevel(run_code);
-      } else if(nd->nids_header.pdb_code == NIDS_PDB_CODE_NXP){
+      } else if((nd->nids_header.pdb_code == NIDS_PDB_CODE_NXP) || 
+		(nd->nids_header.pdb_code == NIDS_PDB_CODE_NTP)){
 	  run_level = nids_decode_nxp_codetolevel(run_code);
       } else {
 	log_errx(1, "Unsupported value [%d] of nd->nids_header.pdb_code.",

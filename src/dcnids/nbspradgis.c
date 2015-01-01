@@ -454,9 +454,10 @@ static void nids_decode_data(struct nids_data_st *nd){
 	     (nd->nids_header.pdb_code == NIDS_PDB_CODE_NXU)){
       nd->polygon_map.level_min = NIDS_RVEL_LEVEL_MIN_VAL;
       nd->polygon_map.level_max = NIDS_RVEL_LEVEL_MAX_VAL;
-    } else if(nd->nids_header.pdb_code == NIDS_PDB_CODE_NXP){
+    } else if((nd->nids_header.pdb_code == NIDS_PDB_CODE_NXP) ||
+	      (nd->nids_header.pdb_code == NIDS_PDB_CODE_NTP)){
       nd->polygon_map.level_min = NIDS_NXP_LEVEL_MIN_VAL;
-      nd->polygon_map.level_min = NIDS_NXP_LEVEL_MAX_VAL;
+      nd->polygon_map.level_max = NIDS_NXP_LEVEL_MAX_VAL;
     } else
 	log_errx(1, "Unsupported value [%d] of nd->nids_header.pdb_code.",
 		 nd->nids_header.pdb_code);

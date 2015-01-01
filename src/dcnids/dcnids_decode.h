@@ -29,6 +29,7 @@
 #define NIDS_PDB_CODE_NXV		27
 #define NIDS_PDB_CODE_NXU		99
 #define NIDS_PDB_CODE_NXP		78	/* n1p, n3p */
+#define NIDS_PDB_CODE_NTP		80	/* ntp */
 
 /* default filter min and max level values if the filtering option is set */
 #define NIDS_BREF_LEVEL_MIN_VAL	1
