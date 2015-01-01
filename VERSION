@@ -10,6 +10,7 @@
 # r = release
 name=nbspgislib
 branch=0.5
+releasenumber=1
 releaselevel=p
-releasenumber=1.3
-version=${branch}.${releaselevel}${releasenumber}
+update=4
+version=${branch}.${releasenumber}${releaselevel}${update}
