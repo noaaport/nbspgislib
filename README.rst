@@ -14,5 +14,6 @@ The wiki has some examples about usage. See also the
 Latest News  - 03 Jan 2015
 =====================
 
-The new version  supports *Stom precicipitation accimulation* products .e.g. N1P), as shown in this `example
+The new version  supports *Storm precipitation accumulation* products
+(e.g. N1P), as shown in this `example
 <http://www.noaaport.net/examples/gis/n1plvx>`_.
