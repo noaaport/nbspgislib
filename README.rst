@@ -7,6 +7,5 @@ to GIS-compatible formats, such as shapefile and others.
 It is a descendant of the Noaaport Broadcast System Processor (Nbsp) project.
 
 The wiki has some examples about usage. See also the
-`Nbsp GIS Map library<https://bitbucket.org/noaaport/nbspgislibmap>`_.
-
-
+`Nbsp GIS Map library
+<https://bitbucket.org/noaaport/nbspgislibmap>`_.
