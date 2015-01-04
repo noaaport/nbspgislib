@@ -3,10 +3,10 @@
  *
  * See LICENSE
  *
- * $Id: dcgini_const.h,v ff74993871f7 2011/01/17 22:56:45 nieves $
+ * $Id: dcgini_const.h,v 79a0587444a1 2015/01/02 23:28:10 nieves $
  */
 #ifndef DCGINI_CONST_H
-#define DCGINI_TCONST_H
+#define DCGINI_CONST_H
 
 #define RAD_PER_DEG     0.0174          /* pi/180 */
 #define DEG_PER_RAD	57.2958		/* 180/pi */

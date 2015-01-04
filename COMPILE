@@ -1,16 +1,17 @@
 #
-# $Id: COMPILE,v 6353839bd4d6 2011/10/27 19:40:06 nieves $
+# $Id: COMPILE,v a4cea8cd9602 2014/12/29 22:56:12 nieves $
 
 The zlib, bzip2 and png libraries are required.
 
 # cd compile
 # ./configure.sh
 # make
+# make install
 #
-# find usr -type f
+# find pkg -type f
 #
-#  usr/local/bin/nbspradgis
-#  usr/local/bin/nbspsatgis
-#  usr/local/bin/nbspunz
-#  usr/local/bin/nbspsatinfo
-#  usr/local/bin/nbspradinfo
+# pkg/usr/local/bin/nbspradgis
+# pk/usr/local/bin/nbspsatgis
+# pkg/usr/local/bin/nbspunz
+# pkg/usr/local/bin/nbspsatinfo
+# pkg/usr/local/bin/nbspradinfo
