@@ -1,0 +1,72 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPSATGIS 1 "4 JANUARY, 2015"
+.SH NAME
+nbspsatgis \- Convert Satellite GINI files to various GIS formats
+.SH SYNOPSIS
+\fBnbspsatgis\fR [output options] <file> | < <file>
+.PP
+The program reads from a file or stdin, but the data must 
+be the uncompressed gini file (including the nesdis wmo header).
+.PP
+The output options are:
+.PP
+.RS 2
+A => do asc
+.br
+-F => do dbf
+.br
+-O => do info
+.br
+-P => do shp
+.br
+-V => do csv
+.br
+-X => do shx
+.br
+-a <asc file>
+.br
+-f <dbf file>
+.br
+-n <base name> => default base name for files
+.br
+-o <info file>
+.br
+-p <shp file>
+.br
+-v <csv file>
+.br
+-x <shx file>
+ .RE
+.PP
+The default action is the same as specifying "-FOPX" (excluding csv, asc).
+When -A is specified (asc format) the [-r] can be used to specify the
+coordinates of the bounding box to use. The default is the "smallest
+enclosing rectangle" The argument to the "-r" option is a string of
+the form "lon1,lat1,lon2,lat2". For example,
+.PP
+.RS 2
+nbspunz tige02.gini | nbspsatgis -A -r "-75,16,-64,24"
+.RE
+.PP
+specifies the rectangle
+.PP
+.RS 2
+lon1,lat1 = (-75,16)
+.br
+lon2,lat2 = (-64,24)
+.RE
+.PP
+If, in addition, the [-q] option is specified, then the values 
+are interpreted asthe amount by which to shrink the default
+rectangle. For example, to shrink the left hand side of a tige file
+by 5 degrees
+.PP
+.RS 2
+nbspunz tige02.gini | nbspsatgis -A -q -r "5,0,0,0"
+.RE
+.PP
+Negative values will have the net effect of expanding the rectangle.

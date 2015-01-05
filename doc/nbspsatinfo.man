@@ -1,0 +1,67 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPSATINFO 1 "4 JANUARY, 2015"
+.SH NAME
+nbspsatinfo \- Extract information from Satellite GINI files
+.SH SYNOPSIS
+\fBnbspsatinfo\fR [-b] [-e] <file> | < <stdin>
+.PP
+If no file is given in the argument, then it reads from stdin.
+(The -i option is accepted for backwards compatibility.)
+It can take either the compressed or uncompresed file as input,
+and it extract the relevant info to stdout.
+The functionality is similar to nbspsat -i, but the output
+does not contain the fname and the time is the unixseconds:
+.PP
+.RS 2
+npdb->source
+.br
+npdb->creating_entity
+.br
+npdb->sector
+.br
+npdb->channel
+.br
+npdb->res
+.br
+(uintmax_t)time
+.RE
+.PP
+With the [-e] option it prints the following additional values after those:
+.PP
+.RS 2
+map_projection (map projection indicator)
+.br
+proj_center_flag (octet 37)
+.br
+scan_mode	 (octet 38)
+.br
+lat1  (lat of first grid point) int x 10000
+.br
+lon1  (lon of first grid point) int x 10000
+.br
+lov   (orientation of grid)     int x 10000
+.br
+dx    (x-direction increment)
+.br
+dy    (y-direction increment)
+.br
+nx    (number of points in x direction)
+.br
+ny    (number of points in y direction)
+.br
+res   (same thing as above; duplicated for convenience)
+.br
+latin (Earth tangent)           int x 10000
+.br
+lat2  (lat of last grid point) int x 10000
+.br
+lon2  (lon of last grid point) int x 10000
+.br
+lat_ur  (upper right-hand corner lat) int x 10000
+.br
+lon_ur  (upper right-hand corner lon) int x 10000
+.RE

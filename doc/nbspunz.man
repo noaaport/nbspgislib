@@ -1,0 +1,23 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPUNZ 1 "4 JANUARY, 2015"
+.SH NAME
+nbspunz \- Uncompress zlib-compressed NIDS files
+.SH SYNOPSIS
+\fbnbspunz\fR [-b] [[-c skipcount] | -C] [-n nframes] [-o output] input
+.PP
+The options are:
+.PP
+.RS 2
+-b => bacjground
+.br
+-c => cut <count> bytes from the output
+.br
+-C => cut ccb header (24 bytes) from the output
+.br
+-n => process only the given number of frames. Useful to extract only
+the header from the first frame.
+.RE

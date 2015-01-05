@@ -1,0 +1,54 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPRADGIS 1 "4 JANUARY, 2015"
+.SH NAME
+nbspradgis \- Convert Nexrad NIDS files to various GIS formats
+.SH SYNOPSIS
+\fBnbspradgis\fR [-c <count> | -C] [output options] <file> | < <file>
+.PP
+The program reads from a file or stdin, but the data must start with the
+wmo header (i.e., the ccb must have been removed). The [-c] amd [-C]
+options work as in nbspradinfo. ee nbspradinfo.c.
+.PP
+The output options are:
+.PP
+.RS 2
+-a => same as FOPVX (all) with the default names
+.br
+-F => do dbf
+.br
+-O => do info
+.br
+-P => do shp
+.br
+-V => do csv
+.br
+-X => do shx
+.br
+-f <dbf file>
+.br
+-n <base name> => default base name for files
+.br
+-o <info file>
+.br
+-p <shp file>
+.br
+-v <csv file>
+.br
+-x <shx file>
+.br
+.RE
+.PP
+The default action is the same as specifying "-FOPX" (excluding csv).
+The data is output in the following units
+.PP
+.RS 2
+reflectivity: dbZ
+.br
+radial velocity: knots
+.br
+acumulated rain: hundredth of inch
+.RE
