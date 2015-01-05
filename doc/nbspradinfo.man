@@ -1,0 +1,79 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPRADINFO 1 "4 JANUARY, 2015"
+.SH NAME
+nbspradinfo \- Extract information from Nexrad NIDS files
+.SH SYNOPSIS
+\fBnbspradinfo\fR [-b] [-c <count> | -C] [-l] [-q] [-t] <file> | < <file>
+.PP
+The program reads from a file or stdin, but in either case the file
+must be the uncompressed file, including the wmo header, but with the
+ccb header removed (If the file has the gempak header, it will be
+detected and it will be skiped.)
+.PP
+The typical usage is therefore
+.PP
+.RS 2
+nbspunz -c 24 ksjt_sdus54-n0rsjt.020131_16452648 | nbspradinfo
+.br
+nbspunz -c 24 n0rsjt_20091002_0007.nids | nbspradinfo
+.RE
+.PP
+In the first case the data file is one from the spool directory;
+in the second, the data file is from the digatmos/nexrad directory.
+.PP
+The same effect is achieved by
+.PP
+.RS 2
+nbspunz -C ksjt_sdus54-n0rsjt.020131_16452648 | nbspradinfo
+.br
+nbspunz -C n0rsjt_20091002_0007.nids | nbspradinfo
+.RE
+.PP
+If the data does not start with the wmo header, the [-c <count>] options
+can be used to instruct the program to ignore the first <count> bytes.
+So an alternative usage is
+.PP
+.RS 2
+nbspunz ksjt_sdus54-n0rsjt.020131_16452648 | nbspradinfo -c 24
+.br
+nbspunz ksjt_sdus54-n0rsjt.020131_16452648 | nbspradinfo -C
+.br
+nbspunz n0rsjt_20091002_0007.nids | nbspradinfo -C
+.RE
+.PP
+If the files have an uncompressed nids header
+.PP
+.RS 2
+nbspradinfo -c 24 tjsj_sdus52-n0qjua.152011_99050818 (from spooldir)
+.br
+nbspradinfo -C tjsj_sdus52-n0qjua.152011_99050818
+.br
+nbspradinfo n0qjua_20101015_1936.nids (from data dirs)
+.RE
+.PP
+The default information printed is
+.PP
+.RS 2
+nheader.pdb_lat, nheader.pdb_lon, nheader.pdb_height, seconds,
+.br
+nheader.pdb_mode, nheader.pdb_code
+.RE
+.PP
+If [-t] is given then only the "seconds" is printed, and if [-l] is given
+then the m_msglength is also printed.
+.RE
+.PP
+Exit codes:
+.PP
+.RS 2
+0 => no errors
+.br
+1 => some error
+.br
+2 => Invalid pdb header; maybe a zlib compressed header.
+This is implemented only when -q is given.
+.RE
