@@ -14,5 +14,6 @@ pkgname=${name}-${version}-${osname}-${osrelease}-${osarch}.tgz
 cd ../compile
 ./configure.sh
 make install
+make install-man
 tar -czf ../dist/${pkgname} pkg
 make clean
