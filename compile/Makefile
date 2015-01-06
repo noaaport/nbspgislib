@@ -5,13 +5,14 @@
 # These are for manipulation by packaging tools
 PKGBUILDDIR = pkg
 PREFIX = usr/local
+MANPREFIX =		# or "share" when prefix=usr
 MANSUBDIR = man/man1
 
 DESTDIR = ${PKGBUILDDIR}/${PREFIX}
 
 BINDIR = ${DESTDIR}/bin
 DOCDIR = ${DESTDIR}/share/doc
-MANDIR = ${DESTDIR}/${MANSUBDIR}
+MANDIR = ${DESTDIR}/${MANPREFIX}/${MANSUBDIR}
 
 BINFILES = \
 	${UNZ_DIR}/nbspunz \

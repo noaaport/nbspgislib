@@ -1,4 +1,4 @@
-Name:           nbspgislibmap
+Name:           nbspgislib
 Version:        @version@
 Release:        @rpmrelease@%{?dist}
 Summary:        Nbsp GIS Library programs
@@ -9,23 +9,24 @@ Source0:        %{name}-%{version}.tgz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
-This package includes a set of Tcl and Mapserver map scripts
-as well as the programs from the NbspGislib library, designed
-to input a set of level III radar (Nids) files, or satellite
-gini files (such as those received via NOAAPort), to produce
-(png) image maps.
+A collection of programs for converting Nexrad NIDS and
+satellite GINI files to shapefiles and various GIS formats.
 
 %prep
 
 %setup
-cd compile; ./configure.sh
+cd compile
+./configure.sh
 
 %build
-cd compile; make %{?_smp_mflags}
+cd compile
+make %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd compile; make install PKGBUILDDIR=$RPM_BUILD_ROOT PREFIX=usr
+cd compile
+make PKGBUILDDIR=$RPM_BUILD_ROOT PREFIX=usr install
+make PKGBUILDDIR=$RPM_BUILD_ROOT PREFIX=usr MANPREFIX=share install-man
 
 %clean
 rm -rf $RPM_BUILD_ROOT

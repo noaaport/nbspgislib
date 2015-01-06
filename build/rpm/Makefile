@@ -4,12 +4,23 @@
 
 include ../../VERSION
 
-all: package
+# requires = $(shell grep -v "^\#" rpm-requires)
+rpmrelease = $(shell grep -v "^\#" rpm-release)
+rpmroot = ${HOME}/docs/devel/rpmbuild
+
+arch =  $(shell uname -m)
+# flavor = $(shell ./flavor.sh)
+dist = $(shell ./dist.sh)
+
+tgzfile = ${name}-${version}.tgz
+rpmfile = ${name}-${version}-${rpmrelease}${dist}.${arch}.rpm
+
+default: package
 
 spec: rpm-spec
-tgz: ${name}-${version}.tgz
+tgz: ${tgzfile}
 
-${name}-${version}.tgz:
+${tgzfile}:
 	cd ../../..;\
 	cp -r ${name} ${name}-${version};\
 	tar -czf ${name}-${version}.tgz ${name}-${version};\
@@ -17,16 +28,16 @@ ${name}-${version}.tgz:
 	mv ../../../${name}-${version}.tgz .
 
 rpm-spec: rpm-spec.in
-	rpmrelease=`cat rpm-release`
 	sed -e "/@name@/s//${name}/" \
 	-e "/@version@/s//${version}/" \
-	-e "/@rpmrelease@/s//$${rpmrelease}/" \
+	-e "/@rpmrelease@/s//${rpmrelease}/" \
 	-e "/@plist@/r rpm-plist" -e "/@plist@/d" \
 	rpm-spec.in > rpm-spec
 
-package: rpm-spec ${name}-${version}.tgz
-	mv ${name}-${version}.tgz ~/rpmbuild/SOURCES
+package: rpm-spec ${tgzfile}
+	mv ${name}-${version}.tgz ${rpmroot}/SOURCES
 	rpmbuild -bb rpm-spec
+	cp ${rpmroot}/RPMS/${arch}/${rpmfile} .
 
 clean:
-	rm -f rpm-spec ${name}-${version}.tgz *~
+	rm -f *~ rpm-spec ${tgzfile} ${rpmfile}
