@@ -13,7 +13,7 @@ The wiki has some examples about usage. See also the
 Latest News - 06 Jan 2015
 =====================
 
-Binary packages for FreeBD-10.1 and Ubuntu-14.04 are available in the Downloads section.
+Binary packages for FreeBD-10.1, Ubuntu-14.04 and CentOS-6.6 are available in the Downloads section.
 
 News  - 03 Jan 2015
 ================
