@@ -3,12 +3,8 @@
 #
 
 PKGMAKEFILE = Makefile.pkg
-MAKEDEPS = ../../compile/Makefile
 
 default: build
-
-../../compile/Makefile: ../../compile/Makefile.in
-	cd ../../compile; ./configure.sh
 
 build: ${MAKEDEPS}
 	${MAKE} -f ${PKGMAKEFILE} build
