@@ -10,7 +10,7 @@ The wiki has some examples about usage. See also the
 `Nbsp GIS Map library
 <https://bitbucket.org/noaaport/nbspgislibmap>`_.
 
-Latest News - 06 Jam 2015
+Latest News - 06 Jan 2015
 =====================
 
 Binary packages for FreeBD-10.1 and Ubuntu-14.04 are available in the Download section.
