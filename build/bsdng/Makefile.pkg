@@ -1,0 +1,48 @@
+#
+# $Id: Makefile.pkg,v 858804ec2273 2015/01/06 03:29:37 nieves $
+#
+.include "../../VERSION"
+.include "pkg-info.mk"
+
+# where this file is located
+pkgng_builddir = build/bsdng
+
+# pkgng settings
+pkg_metadir = pkg
+pkg_root = ${pkg_metadir}/root
+pkg_file = ${name}-${version}_${pkg_build}.txz
+pkg_options = -m ${pkg_metadir} -p pkg-plist -r ${pkg_root} -o ${pkg_metadir}
+pkg_metafiles = ${pkg_metadir}/+MANIFEST \
+	      ${pkg_metadir}/+DESC
+
+default: build
+
+build:
+	cd ../../compile; ${MAKE} clean
+	cd ../../compile; ./configure.sh
+	cd ../../compile; ${MAKE}
+
+install: build
+	rm -rf ${pkg_metadir}
+	install -d ${pkg_root}
+	PKGBUILDDIR=`pwd`/${pkg_root}; \
+		cd ../../compile; \
+	   	${MAKE} PKGBUILDDIR=$${PKGBUILDDIR} install; \
+	   	${MAKE} PKGBUILDDIR=$${PKGBUILDDIR} install-man
+
+${pkg_metadir}/+DESC: pkg-desc.in
+	cp pkg-desc.in ${pkg_metadir}/+DESC
+
+${pkg_metadir}/+MANIFEST: manifest.in
+	sed -e "/@name@/s//${name}/" \
+	-e "/@version@/s//${version}/" \
+	-e "/@pkgbuild@/s//${pkg_build}/" \
+	-e "/@abi@/s//${abi}/" \
+	manifest.in > ${pkg_metadir}/+MANIFEST
+
+package: install ${pkg_metafiles}
+	pkg create ${pkg_options}
+
+clean:
+	cd ../../compile; ./configure.sh; ${MAKE} clean
+	rm -f -r *~ ${pkg_metadir}

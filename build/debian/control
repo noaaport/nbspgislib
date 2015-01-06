@@ -1,0 +1,12 @@
+Source: nbspgislib
+Section: unknown
+Priority: extra
+Maintainer: Jose F Nieves <nieves@ltp.uprrp.edu>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: nbspgislib
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: A collection of programs for converting Nexrad NIDS and
+ satellite GINI files to shapefiles and various GIS formats.

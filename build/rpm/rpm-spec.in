@@ -1,0 +1,41 @@
+Name:           nbspgislib
+Version:        @version@
+Release:        @rpmrelease@%{?dist}
+Summary:        Nbsp GIS Library programs
+Group:          Applications/Internet
+License:        BSD
+URL:            http://www.noaaport.net
+Source0:        %{name}-%{version}.tgz
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+
+%description
+A collection of programs for converting Nexrad NIDS and
+satellite GINI files to shapefiles and various GIS formats.
+
+%prep
+
+%setup
+cd compile
+./configure.sh
+
+%build
+cd compile
+make %{?_smp_mflags}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+cd compile
+make PKGBUILDDIR=$RPM_BUILD_ROOT PREFIX=usr install
+make PKGBUILDDIR=$RPM_BUILD_ROOT PREFIX=usr MANPREFIX=share install-man
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+
+@plist@
+
+%doc
+
+%changelog

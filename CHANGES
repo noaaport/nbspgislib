@@ -1,3 +1,7 @@
+- 06 jan 2015
+  - Finished adding manpages and support files for building bsd, ubuntu
+    and centos packages.
+
 - 29 dic 2014
   - Added support for n1p and n2p in nbspradgis
 
