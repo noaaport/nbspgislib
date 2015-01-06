@@ -14,7 +14,7 @@ Latest News - 06 Jan 2015
 =====================
 
 Binary packages for FreeBD-10.1, Ubuntu-14.04 and CentOS-6 and 7
-are available in the Downloads section.
+are available in the Downloads section in the bitbucket repository.
 
 News  - 03 Jan 2015
 ================
