@@ -1,0 +1,5 @@
+nbspgislib (0.5.1p4-1) stable; urgency=low
+
+  * Initial debian package release
+
+ -- Jose F Nieves <nieves@ltp.uprrp.edu>  Mon, 05 Jan 2015 20:27:36 -0400
