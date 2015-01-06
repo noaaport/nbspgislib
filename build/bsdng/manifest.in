@@ -6,6 +6,5 @@ arch: @abi@
 www: http://www.noaaport.net
 maintainer: nieves@1-loop.net
 licenses: [ISC]
-comment: Nbsp GIS Maps Library
+comment: Nbsp GIS Library
 prefix: /usr/local
-@deps@

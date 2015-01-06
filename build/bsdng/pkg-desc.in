@@ -1,3 +1,2 @@
-A collection of programs and scripts to create image maps
-from Radar Level III (Nids) files and Sat gini files
-using the Mapserver.
+A collection of programs for converting Nexrad NIDS and
+satellite GINI files to shapefiles and various GIS formats.

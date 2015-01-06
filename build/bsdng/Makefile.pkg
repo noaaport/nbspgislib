@@ -15,15 +15,6 @@ pkg_options = -m ${pkg_metadir} -p pkg-plist -r ${pkg_root} -o ${pkg_metadir}
 pkg_metafiles = ${pkg_metadir}/+MANIFEST \
 	      ${pkg_metadir}/+DESC
 
-# pkgng settings for the no-nbin subpackage
-name_nobin = ${name}-nobin
-pkg_metadir_nobin = pkg-nobin
-pkg_file_nobin = ${name_nobin}-${version}_${pkg_build}.txz
-pkg_options_nobin = -m ${pkg_metadir_nobin} -p pkg-plist.nobin \
-		  -r ${pkg_root} -o ${pkg_metadir}
-pkg_metafiles_nobin = ${pkg_metadir_nobin}/+MANIFEST \
-		    ${pkg_metadir_nobin}/+DESC
-
 default: build
 
 ../../compile/Makefile: ../../compile/Makefile.in
@@ -34,9 +25,7 @@ build: ../../compile/Makefile
 
 install: build
 	rm -rf ${pkg_metadir}
-	rm -rf ${pkg_metadir_nobin}
 	install -d ${pkg_root}
-	install -d ${pkg_metadir_nobin}
 	PKGBUILDDIR=`pwd`/${pkg_root}; \
 		cd ../../compile; \
 	   	${MAKE} PKGBUILDDIR=$${PKGBUILDDIR} install; \
@@ -50,26 +39,11 @@ ${pkg_metadir}/+MANIFEST: manifest.in pkg-deps
 	-e "/@version@/s//${version}/" \
 	-e "/@pkgbuild@/s//${pkg_build}/" \
 	-e "/@abi@/s//${abi}/" \
-	-e "/@deps@/r pkg-deps"\
-	-e "/@deps@/d" \
 	manifest.in > ${pkg_metadir}/+MANIFEST
 
-${pkg_metadir_nobin}/+DESC: pkg-desc.in
-	cp pkg-desc.in ${pkg_metadir_nobin}/+DESC
-
-${pkg_metadir_nobin}/+MANIFEST: manifest.in pkg-deps
-	sed -e "/@name@/s//${name_nobin}/" \
-	-e "/@version@/s//${version}/" \
-	-e "/@pkgbuild@/s//${pkg_build}/" \
-	-e "/@abi@/s//${abi}/" \
-	-e "/@deps@/r pkg-deps"\
-	-e "/@deps@/d" \
-	manifest.in > ${pkg_metadir_nobin}/+MANIFEST
-
-package: install ${pkg_metafiles} ${pkg_metafiles_nobin}
+package: install ${pkg_metafiles}
 	pkg create ${pkg_options}
-	pkg create ${pkg_options_nobin}
 
 clean:
 	cd ../../compile; ./configure.sh; ${MAKE} distclean
-	rm -f -r *~ ${pkg_metadir} ${pkg_metadir_nobin}
+	rm -f -r *~ ${pkg_metadir}

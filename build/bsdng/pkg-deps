@@ -1,5 +1,0 @@
-deps: {
-  tcl86: {origin: "lang/tcl86", version: "8.6.1"},
-  tcllib: {origin: "devel/tcllib", version: "1.16"},
-  mapserver: {origin: "graphics/mapserver", version: "6.4"}
-}
