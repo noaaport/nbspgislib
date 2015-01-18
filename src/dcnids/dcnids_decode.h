@@ -39,8 +39,8 @@
 #define NIDS_RVEL_LEVEL_MAX_VAL	64
 #define NIDS_NXP_LEVEL_MIN_VAL 5
 #define NIDS_NXP_LEVEL_MAX_VAL 800
-#define NIDS_SRVEL_LEVEL_MIN_VAL -64
-#define NIDS_SRVEL_LEVEL_MAX_VAL 64
+#define NIDS_SRVEL_LEVEL_MIN_VAL -50
+#define NIDS_SRVEL_LEVEL_MAX_VAL 50
 
 /* These are arbitrary values that we assign to the rvel codes 0 and 15 */
 #define NIDS_RVEL_LEVEL_ND_MIN	-65

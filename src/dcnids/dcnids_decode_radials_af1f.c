@@ -683,22 +683,22 @@ static int nids_decode_srvel_codetolevel(int run_code){
     run_level = NIDS_SRVEL_LEVEL_ND_MIN;
     break;
   case 1:
-    run_level = -64;
-    break;
-  case 2:
     run_level = -50;
     break;
+  case 2:
+    run_level = -40;
+    break;
   case 3:
-    run_level = -36;
+    run_level = -30;
     break;
   case 4:
-    run_level = -26;
+    run_level = -22;
     break;
   case 5:
-    run_level = -20;
+    run_level = -10;
     break;
   case 6:
-    run_level = -10;
+    run_level = -5;
     break;
   case 7:
     run_level = -1;
@@ -707,22 +707,22 @@ static int nids_decode_srvel_codetolevel(int run_code){
     run_level = 0;
     break;
   case 9:
-    run_level = 10;
+    run_level = 5;
     break;
   case 10:
-    run_level = 20;
+    run_level = 10;
     break;
   case 11:
-    run_level = 26;
+    run_level = 22;
     break;
   case 12:
-    run_level = 36;
+    run_level = 30;
     break;
   case 13:
-    run_level = 50;
+    run_level = 40;
     break;
   case 14:
-    run_level = 64;
+    run_level = 50;
     break;
   case 15:
     run_level = NIDS_SRVEL_LEVEL_ND_MAX;

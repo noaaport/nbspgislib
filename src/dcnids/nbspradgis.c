@@ -33,7 +33,7 @@
  * The data is output in the following units
  *
  *  reflectivity: dbZ
- *  rel velocity: knots
+ *  rad and rel velocity: knots
  *  acumulated rain: hundredth of inch (nids_decode_nxp_codetolevel())
  */
 
