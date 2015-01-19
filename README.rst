@@ -14,9 +14,8 @@ Latest News - 18 Jan 2015
 =========================
 
 The new version  supports *Storm relative velocity* products
-(e.g. N1S, ...), as shown in these examples `n1slvx
-<http://www.noaaport.net/examples/gis/n1slvx>`_ and
-`n2slvx <http://www.noaaport.net/examples/gis/n2slvx>`_.
+(e.g. N1S), as shown in this `example
+<http://www.noaaport.net/examples/gis/n1slvx>`_.
 
 News - 06 Jan 2015
 ==================
