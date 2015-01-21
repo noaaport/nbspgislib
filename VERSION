@@ -1,5 +1,5 @@
 #
-# $Id: VERSION,v 4f408341f966 2015/01/01 18:55:53 nieves $
+# $Id: VERSION,v 5653baff35bc 2015/01/18 16:23:25 nieves $
 #
 
 # The definitions here should appear without spaces around the '='
@@ -12,5 +12,5 @@ name=nbspgislib
 branch=0.5
 releasenumber=1
 releaselevel=p
-update=4
+update=5
 version=${branch}.${releasenumber}${releaselevel}${update}
