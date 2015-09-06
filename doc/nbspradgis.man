@@ -10,8 +10,8 @@ nbspradgis \- Convert Nexrad NIDS files to various GIS formats
 \fBnbspradgis\fR [-c <count> | -C] [output options] <file> | < <file>
 .PP
 The program reads from a file or stdin, but the data must start with the
-wmo header (i.e., the ccb must have been removed). The [-c] amd [-C]
-options work as in nbspradinfo. ee nbspradinfo.c.
+wmo header (i.e., the ccb must have been removed). Otherwise the [-c] or [-C]
+option can be used, which work as in nbspradinfo. See the nbspradinfo man page.
 .PP
 The output options are:
 .PP
