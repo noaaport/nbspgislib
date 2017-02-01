@@ -12,5 +12,5 @@ name=nbspgislib
 branch=0.5
 releasenumber=1
 releaselevel=p
-update=5
+update=6
 version=${branch}.${releasenumber}${releaselevel}${update}

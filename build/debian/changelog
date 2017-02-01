@@ -1,3 +1,9 @@
+nbspgislib (0.5.1p6-1) stable; urgency=low
+
+  * Third debian package release. Corrected nbspradgis man page
+
+ -- Jose F Nieves <nieves@ltp.uprrp.edu>  Sun, 06 Sep 2015 21:04:40 -0400
+
 nbspgislib (0.5.1p5-1) stable; urgency=low
 
   * Second debian package release. Added support for nXs
