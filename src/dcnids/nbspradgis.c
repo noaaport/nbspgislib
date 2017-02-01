@@ -3,7 +3,7 @@
  *
  * See LICENSE
  *
- * $Id: nbspradgis.c,v 720f4f945739 2015/01/18 04:14:56 nieves $
+ * $Id: nbspradgis.c,v 67475282ad59 2017/02/01 00:18:59 nieves $
  */
 
 /*
@@ -11,7 +11,7 @@
  *
  * The program reads from a file or stdin, but the data must start with the
  * wmo header (i.e., the ccb must have been removed). The [-c] amd [-C]
- * options work as in nbspradinfo. ee nbspradinfo.c.
+ * options work as in nbspradinfo (see nbspradinfo.c).
  *
  * The output options are:
  *
