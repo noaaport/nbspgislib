@@ -7,13 +7,15 @@
  */
 
 /*
- * Usage: nbspsatgis [output options] <file> | < <file>
+ * Usage: nbspsatgis [options] [output options] <file> | < <file>
  *
  * The program reads from a file or stdin, but the data must 
  * be the uncompressed gini file (including the nesdis wmo header).
  *
  * The output options are:
  *
+ *  -b => process in the background
+ *  -d => output directory
  *  -A => do asc
  *  -F => do dbf
  *  -O => do info

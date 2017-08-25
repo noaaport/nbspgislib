@@ -27,6 +27,7 @@
  * nbspunz -C ksjt_sdus54-n0rsjt.020131_16452648 | nbspradinfo
  * nbspunz -C n0rsjt_20091002_0007.nids | nbspradinfo
  *
+ * The -C option is the same as specifying "-c 24".
  * If the data does not start with the wmo header, the [-c <count>] options
  * can be used to instruct the program to ignore the first <count> bytes.
  * So an alternative usage is

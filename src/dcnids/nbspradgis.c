@@ -7,26 +7,37 @@
  */
 
 /*
- * nbspradgis [-c <count> | -C] [output options] <file> | < <file>
+ * nbspradgis [-c <count> | -C] [options] [output options] <file> | < <file>
  *
  * The program reads from a file or stdin, but the data must start with the
- * wmo header (i.e., the ccb must have been removed). The [-c] amd [-C]
+ * wmo header (i.e., the ccb must have been removed). The [-c] and [-C]
  * options work as in nbspradinfo (see nbspradinfo.c).
  *
  * The output options are:
  *
+ *  -d => output directory
+ *  -n => default basename
  *  -a => same as FOPVX (all) with the default names
  *  -F => do dbf
  *  -O => do info
  *  -P => do shp
- *  -V => do csv
  *  -X => do shx
+ *  -V => do csv
  *  -f <dbf file>
  *  -n <base name> => default base name for files
  *  -o <info file>
  *  -p <shp file>
  *  -v <csv file>
  *  -x <shx file>
+ *
+ * Additional options:
+ *
+ *  -b => process in the background
+ *  -c <count> => skip the first <count> bytes
+ *  -C => the same as -c 24
+ *  -D => apply data filtering options M,N
+ *  -M => filter "level" min value
+ *  -N => filter "level" max value
  *
  * The default action is the same as specifying "-FOPX" (excluding csv).
  *
@@ -122,7 +133,7 @@ int main(int argc, char **argv){
 
   char *optstr = "abCDFOPVXc:d:M:N:f:n:o:p:v:x:";
   char *usage = "nbspradgis [-a] [-b] [-C] [-D] [-FOPVX] "
-    "[-c count] [-d outputdir] [-M min_level] [-N min_level] "
+    "[-c count] [-d outputdir] [-M min_level] [-N max_level] "
     "[-f dbffile] [-o infofile] [-p shpfile] [-v csvfile] [-x shxfile] "
     "<file> | < file";
   int status = 0;
