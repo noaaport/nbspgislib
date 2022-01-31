@@ -200,6 +200,7 @@ int main(int argc, char **argv){
       if(sscanf(optarg, "%d", &g.level_min) != 1){
 	log_errx(1, "Invalid argument to -M option: %s", optarg);
       }
+      break;
     case 'N':
       g.opt_levelmax = optarg;
       if(sscanf(optarg, "%d", &g.level_max) != 1){
