@@ -6,4 +6,6 @@
 # read name and version
 . ../VERSION
 
-hg archive -t tgz "%b-${version}.tgz"
+cd ..
+git archive --format tgz --prefix "${name}-${version}/" \
+    -o "dist/${name}-${version}.tgz" HEAD
