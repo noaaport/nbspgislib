@@ -7,15 +7,15 @@
 #
 SOURCES = nbspunz.man \
 	nbspradinfo.man nbspradgis.man \
-	nbspsatinfo.man nbspsatgis.man
+	nbspsat.man nbspsatinfo.man nbspsatgis.man
 
 OBJECTS = nbspunz.1 \
 	nbspradinfo.1 nbspradgis.1 \
-	nbspsatinfo.1 nbspsatgis.1
+	nbspsat.1 nbspsatinfo.1 nbspsatgis.1
 
 TARGET = nbspunz.1.gz \
 	nbspradinfo.1.gz nbspradgis.1.gz \
-	nbspsatinfo.1.gz nbspsatgis.1.gz
+	nbspsat.1.gz nbspsatinfo.1.gz nbspsatgis.1.gz
 
 all: ${TARGET}
 
@@ -30,6 +30,10 @@ nbspradinfo.1.gz: nbspradinfo.man
 nbspradgis.1.gz: nbspradgis.man
 	cp nbspradgis.man nbspradgis.1
 	gzip -9 -c nbspradgis.1 > nbspradgis.1.gz
+
+nbspsat.1.gz: nbspsat.man
+	cp nbspsat.man nbspsat.1
+	gzip -9 -c nbspsat.1 > nbspsat.1.gz
 
 nbspsatinfo.1.gz: nbspsatinfo.man
 	cp nbspsatinfo.man nbspsatinfo.1

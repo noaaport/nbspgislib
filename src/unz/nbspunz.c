@@ -9,10 +9,12 @@
 /*
  * nbspunz [-b] [[-c skipcount] | -C] [-n nframes] [-o output] fname
  *
+ * -b => background
  * -c => cut <count> bytes from the output
  * -C => cut ccb header (24 bytes) from the output
+ * -n => number of frames to process
+ * -o => name of output file (otherwise stdout)
  */
-
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>

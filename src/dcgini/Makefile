@@ -5,9 +5,10 @@
 #
 # $Id$
 #
-TARGET = nbspsatinfo nbspsatgis
-OBJECTS = nbspsatinfo.o nbspsatgis.o ${DC_OBJECTS}
+TARGET = nbspsat nbspsatinfo nbspsatgis
+OBJECTS = nbspsat.o nbspsatinfo.o nbspsatgis.o ${DC_OBJECTS}
 
+SAT_OBJECTS = nbspsat.o ${COMMON_OBJECTS} ${DC_OBJECTS}
 SATINFO_OBJECTS = nbspsatinfo.o ${COMMON_OBJECTS} ${DC_OBJECTS}
 SATGIS_OBJECTS = nbspsatgis.o ${COMMON_OBJECTS} ${DC_OBJECTS}
 
@@ -40,7 +41,10 @@ INCDIRS = 	-iquote . -iquote ../common
 INCDIRS += 	-I /usr/local/include
 LIBDIRS = 	-L /usr/local/lib
 LIBS =		-lz -lm
-LDFLAGS += 	${LIBDIRS} ${LIBS}
+LDFLAGS = 	${LIBDIRS} ${LIBS}
+#
+SAT_LIBS =	-lz -lm -lpng
+SAT_LDFLAGS = 	${LIBDIRS} ${SAT_LIBS}
 
 #DEBUGFLAGS =	-g
 #DEBUGFLAGS =	-DNDEBUG
@@ -72,6 +76,9 @@ util.c: ${COMMON_DIR}/util.c
 
 unz.c: ${COMMON_DIR}/unz.c
 	cp ${COMMON_DIR}/unz.c .
+
+nbspsat: ${SAT_OBJECTS}
+	${CC} -o nbspsat ${SAT_OBJECTS} ${SAT_LDFLAGS}
 
 nbspsatinfo: ${SATINFO_OBJECTS}
 	${CC} -o nbspsatinfo ${SATINFO_OBJECTS} ${LDFLAGS}

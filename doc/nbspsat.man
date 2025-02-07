@@ -1,0 +1,86 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPSAT 1 "4 JANUARY, 2015"
+.SH NAME
+nbspsat \- Process a sat (gini) file to produce a png image
+.SH SYNOPSIS
+\fbnbspsat\fR [-C | -g | -i | -n] [options] [file | < file]
+.PP
+The program can read from a file or from stdin, but it assumes that
+the input is the uncompressed gini data file. Only when it is
+invoked with [-i] to just extract the relevant info,
+it can take either the compressed or uncompresed file as input.
+It prints to stdout
+.PP
+.RS 2
+npdb->source
+.br
+npdb->creating_entity
+.br
+npdb->sector
+.br
+npdb->channel
+.br
+npdb->res
+.br
+time, (date-time string)
+.br
+fname
+.RE
+.PP
+With the [-e] option it prints the following additional values after those:
+.PP
+.RS 2
+map_projection (map projection indicator)
+.br
+proj_center_flag (octet 37)
+.br
+scan_mode	 (octet 38)
+.br
+lat1  (lat of first grid point) int x 10000
+.br
+lon1  (lon of first grid point) int x 10000
+.br
+lov   (orientation of grid)     int x 10000
+.br
+dx    (x-direction increment)
+.br
+dy    (y-direction increment)
+.br
+nx    (number of points in x direction)
+.br
+ny    (number of points in y direction)
+.br
+res   (same thing as above; duplicated for convenience)
+.br
+latin (Earth tangent)           int x 10000
+.br
+lat2  (lat of last grid point) int x 10000
+.br
+lon2  (lon of last grid point) int x 10000
+.br
+lat_ur  (upper right-hand corner lat) int x 10000
+.br
+lon_ur  (upper right-hand corner lon) int x 10000
+.RE
+.PP
+The options are:
+.PP
+.RS 2
+-b => background
+.br
+-C => check pdb header and exit
+.br
+-i => print info and exit (extended output with -e)
+.br
+-g => gempak output (compress file)
+.br
+-n => png image output (default)
+.br
+-p => change default prefix of output filename
+.br
+-s => silent
+.RE

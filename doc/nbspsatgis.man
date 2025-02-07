@@ -15,7 +15,7 @@ be the uncompressed gini file (including the nesdis wmo header).
 The output options are:
 .PP
 .RS 2
-A => do asc
+-A => do asc
 .br
 -F => do dbf
 .br

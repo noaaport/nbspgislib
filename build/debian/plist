@@ -2,6 +2,7 @@
 /usr/bin/nbspradinfo
 /usr/bin/nbspsatinfo
 /usr/bin/nbspradgis
+/usr/bin/nbspsat
 /usr/bin/nbspsatgis
 /usr/bin/nbspgoesr
 /usr/bin/nbspgoesrinfo

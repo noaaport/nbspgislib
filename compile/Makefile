@@ -18,6 +18,7 @@ BINFILES = \
 	${UNZ_DIR}/nbspunz \
 	${DCNIDS_DIR}/nbspradinfo \
 	${DCNIDS_DIR}/nbspradgis \
+	${DCGINI_DIR}/nbspsat \
 	${DCGINI_DIR}/nbspsatinfo \
 	${DCGINI_DIR}/nbspsatgis \
 	${DCGOESR_DIR}/nbspgoesr \
@@ -28,6 +29,7 @@ MANFILES = \
 	doc/nbspunz.1.gz \
 	doc/nbspradinfo.1.gz \
 	doc/nbspradgis.1.gz \
+	doc/nbspsat.1.gz \
 	doc/nbspsatinfo.1.gz \
 	doc/nbspsatgis.1.gz
 

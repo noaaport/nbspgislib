@@ -3,6 +3,7 @@
 bin/nbspunz
 bin/nbspradinfo
 bin/nbspradgis
+bin/nbspsat
 bin/nbspsatinfo
 bin/nbspsatgis
 bin/nbspgoesr
@@ -11,5 +12,6 @@ bin/nbspgoesrgis
 man/man1/nbspunz.1.gz
 man/man1/nbspradinfo.1.gz
 man/man1/nbspradgis.1.gz
+man/man1/nbspsat.1.gz
 man/man1/nbspsatinfo.1.gz
 man/man1/nbspsatgis.1.gz

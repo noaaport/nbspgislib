@@ -12,7 +12,7 @@ nbspunz \- Uncompress zlib-compressed NIDS files
 The options are:
 .PP
 .RS 2
--b => bacjground
+-b => background
 .br
 -c => cut <count> bytes from the output
 .br
