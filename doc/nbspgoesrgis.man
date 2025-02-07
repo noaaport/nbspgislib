@@ -1,0 +1,72 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPGOESRGIS 1 "6 FEBRUARY, 2025"
+.SH NAME
+nbspgoesrgis \- Convert GOESR (netcdf) files to GIS files in various formats
+.SH SYNOPSIS
+\fBnbspgoesrgis\fR [output_options] [options] ncfile
+.PP
+The output_options are:
+.PP
+.RS 2
+-A => do asc
+.br
+-F => do dbf
+.br
+-O => do info
+.br
+-P => do shp
+.br
+-V => do csv
+.br
+-X => do shx
+.br
+-a <asc file>
+.br
+-d <output dir>
+.br
+-f <dbf file>
+.br
+-n <base name> => default base name for output files not specified
+.br
+-o <info file>
+.br
+-p <shp file>
+.br
+-v <csv file>
+.br
+-x <shx file>
+.RE
+.PP
+The default action is the same as specifying "-FOPX" (excluding csv, asc).
+.PP
+When -A is specified (asc format) the [-s] can be used to specify the
+coordinates of the bounding box to use. The default is the "maximum
+enclosing rectangle". The argument to the "-r" option is a string of
+the form "lon1,lat1,lon2,lat2". For example,
+.PP
+.RS 2
+nbspgoesrgis -a tire05.asc -s "-75,16,-64,24" tire05.nc
+.RE
+.PP
+specifies the rectangle
+.PP
+.RS 2
+lon1,lat1 = (-75,16)
+.br
+lon2,lat2 = (-64,24)
+.RE
+.PP
+If, in addition, the [-t] option is specified, then the values
+are interpreted as the amount by which to shrink the default
+rectangle. For example, to shrink the left hand side of a tire file
+by 5 degrees
+.PP
+.RS 2
+nbspgoesgis -a tire05.asc -t -s "5,0,0,0" tire05.nc
+.RE
+.PP
+Negative values will have the net effect of expanding the rectangle.

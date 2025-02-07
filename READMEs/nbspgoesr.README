@@ -3,7 +3,7 @@
  *
  * Usage: nbspgoesr [-bci] [-g|-r] [-d outputdir] [-o outputfile] <ncfile>
  *
- * -b => bakground
+ * -b => background
  * -c => output csv - default is png
  * -i => output info - default is png
  * -g|-r => input is a glm (tirs00) or an OR_ABI type file

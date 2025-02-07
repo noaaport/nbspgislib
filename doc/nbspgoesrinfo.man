@@ -1,0 +1,70 @@
+.\"
+.\" $Id$
+.\"
+.\" See LICENSE
+.\"
+.TH NBSPGOESRINFO 1 "6 FEBRUARY, 2025"
+.SH NAME
+nbspgoesrinfo \- Extract information from Satellite GOESR (netcdf) files
+.SH SYNOPSIS
+\fBnbspgoesrinfo\fR  [-b] <ncfile>
+.PP
+Options:
+.PP
+.RS 2
+-b => bakground
+.RE
+.PP
+The program emits the values of the following data
+.PP
+.RS 2product_name
+start_date_time
+.br
+source_scene
+.br
+satellite_id
+.br
+abi_mode
+.br
+channel_id
+.br
+unix_second
+.br
+ymd
+.br
+hm
+.RE
+.PP
+all in one line, separated by a space. The first 6 are contained in the
+nc file. The ymd and hm are the date conversion of the julian start_date_time.
+.PP
+Example - On a "tire13" file,
+.PP
+.RS 2
+econus-020-b12-m6c13 2025011180117 conus goes-16 6 13
+1736982077 20250115 2301
+.br
+.RE
+.PP
+The output can then be used (e.g., in the "filters.lib") like this:
+.PP
+set goesrinfo [exec nbspgoesrinfo $ncfile]
+.br
+set rc(goesr_product_name) [lindex $goesrinfo 0];
+.br
+set rc(goesr_start_date_time) [lindex $goesrinfo 1];
+.br
+set rc(goesr_source_scene) [lindex $goesrinfo 2];
+.br
+set rc(goesr_satellite_id) [lindex $goesrinfo 3];
+.br
+set rc(goesr_abi_mode) [lindex $goesrinfo 4];
+.br
+set rc(goesr_channel_id) [lindex $goesrinfo 5];
+.br
+set rc(goesr_useconds) [lindex $goesrinfo 6];
+.br
+set rc(goesr_ymd) [lindex $goesrinfo 7];
+.br
+set rc(goesr_hm) [lindex $goesrinfo 8];
+.RE
