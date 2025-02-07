@@ -13,7 +13,8 @@ The wiki has some examples about usage. See also the
 Latest News - 07 Feb 2025
 =========================
 
-The new incorporate nbspgoesr tools for processing GOESR (netcdf) files.
+The new version incorporates nbspgoesr tools for processing
+GOESR (netcdf) files.
 
 News - 18 Jan 2015
 =========================
