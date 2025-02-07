@@ -31,7 +31,10 @@ MANFILES = \
 	doc/nbspradgis.1.gz \
 	doc/nbspsat.1.gz \
 	doc/nbspsatinfo.1.gz \
-	doc/nbspsatgis.1.gz
+	doc/nbspsatgis.1.gz \
+	doc/nbspgoesr.1.gz \
+	doc/nbspgoesrinfo.1.gz \
+	doc/nbspgoesrgis.1.gz
 
 UNZ_DIR = src/unz
 DCNIDS_DIR = src/dcnids

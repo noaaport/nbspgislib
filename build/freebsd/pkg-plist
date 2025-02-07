@@ -15,3 +15,6 @@ man/man1/nbspradgis.1.gz
 man/man1/nbspsat.1.gz
 man/man1/nbspsatinfo.1.gz
 man/man1/nbspsatgis.1.gz
+man/man1/nbspgoesr.1.gz
+man/man1/nbspgoesrinfo.1.gz
+man/man1/nbspgoesrgis.1.gz
