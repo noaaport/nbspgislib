@@ -7,15 +7,13 @@
  */
 
 /*
- * Usage: nbspsatgis [options] [output options] <file> | < <file>
+ * Usage: nbspsatgis [output options] <file> | < <file>
  *
  * The program reads from a file or stdin, but the data must 
  * be the uncompressed gini file (including the nesdis wmo header).
  *
  * The output options are:
  *
- *  -b => process in the background
- *  -d => output directory
  *  -A => do asc
  *  -F => do dbf
  *  -O => do info
@@ -23,6 +21,7 @@
  *  -V => do csv
  *  -X => do shx
  *  -a <asc file>
+ *  -d <output dir>
  *  -f <dbf file>
  *  -n <base name> => default base name for files
  *  -o <info file>
@@ -33,7 +32,7 @@
  * The default action is the same as specifying "-FOPX" (excluding csv, asc).
  *
  * When -A is specified (asc format) the [-r] can be used to specify the
- * coordinates of the bounding box to use. The default is the "smallest
+ * coordinates of the bounding box to use. The default is the "maximum
  * enclosing rectangle" The argument to the "-r" option is a string of
  * the form "lon1,lat1,lon2,lat2". For example,
  *
@@ -59,7 +58,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include <png.h>
 #include <zlib.h>
 #include <libgen.h>
 #include "err.h"

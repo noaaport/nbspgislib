@@ -5,6 +5,9 @@ bin/nbspradinfo
 bin/nbspradgis
 bin/nbspsatinfo
 bin/nbspsatgis
+bin/nbspgoesr
+bin/nbspgoesrinfo
+bin/nbspgoesrgis
 man/man1/nbspunz.1.gz
 man/man1/nbspradinfo.1.gz
 man/man1/nbspradgis.1.gz

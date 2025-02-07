@@ -19,7 +19,10 @@ BINFILES = \
 	${DCNIDS_DIR}/nbspradinfo \
 	${DCNIDS_DIR}/nbspradgis \
 	${DCGINI_DIR}/nbspsatinfo \
-	${DCGINI_DIR}/nbspsatgis
+	${DCGINI_DIR}/nbspsatgis \
+	${DCGOESR_DIR}/nbspgoesr \
+	${DCGOESR_DIR}/nbspgoesrinfo \
+	${DCGOESR_DIR}/nbspgoesrgis
 
 MANFILES = \
 	doc/nbspunz.1.gz \
@@ -31,6 +34,7 @@ MANFILES = \
 UNZ_DIR = src/unz
 DCNIDS_DIR = src/dcnids
 DCGINI_DIR = src/dcgini
+DCGOESR_DIR = src/dcgoesr
 
 all:
 	cd src; ${MAKE} all

@@ -9,4 +9,4 @@ Package: nbspgislib
 Architecture: any
 Depends: ${shlibs:Depends}
 Description: A collection of programs for converting Nexrad NIDS and
- satellite GINI files to shapefiles and various GIS formats.
+ satellite (GINI, GOESR) files to shapefiles and various GIS formats.

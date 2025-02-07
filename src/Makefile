@@ -1,12 +1,13 @@
 #
 # Copyright (c) 2005-2011 Jose F. Nieves <nieves@ltp.upr.clu.edu>
+# Copyright (c) 2025 Jose F. Nieves <nieves@ltp.uprrp.edu>
 #
 # See LICENSE
 #
 # $Id$
 #
 
-SUBDIRS = dcgini dcnids unz
+SUBDIRS = dcnids dcgoesr dcgini unz
 
 all:
 	for dir in ${SUBDIRS}; do \

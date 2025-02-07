@@ -2,7 +2,7 @@ Overview
 ========
 
 The Nbsp GIS library is a collection of C programs and software library
-for converting the NOAAPort radar (NIDS) and satellite (GINI) files
+for converting the NOAAPort radar (NIDS) and satellite (GINI and GOESR) files
 to GIS-compatible formats, such as shapefile and others.
 It is a descendant of the Noaaport Broadcast System Processor (Nbsp) project.
 
@@ -10,7 +10,12 @@ The wiki has some examples about usage. See also the
 `Nbsp GIS Map library
 <https://bitbucket.org/noaaport/nbspgislibmap>`_.
 
-Latest News - 18 Jan 2015
+Latest News - 07 Feb 2025
+=========================
+
+The new incorporate nbspgoesr tools for processing GOESR (netcdf) files.
+
+News - 18 Jan 2015
 =========================
 
 The new version  supports *Storm relative velocity* products

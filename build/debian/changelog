@@ -1,3 +1,9 @@
+nbspgislib (1.1p1-1) stable; urgency=low
+
+  * Added nbspgoesr tools
+
+ -- Jose F Nieves <nieves@ltp.uprrp.edu>  Fri, 07 Feb 2025 12:12:59 -0400
+
 nbspgislib (0.5.1p6-1) stable; urgency=low
 
   * Third debian package release. Corrected nbspradgis man page
